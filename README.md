@@ -1,120 +1,122 @@
-# EMQX
-
-[![GitHub Release](https://img.shields.io/github/release/emqx/emqx?color=brightgreen&label=Release)](https://github.com/emqx/emqx/releases)
-[![Build Status](https://github.com/emqx/emqx/actions/workflows/_push-entrypoint.yaml/badge.svg)](https://github.com/emqx/emqx/actions/workflows/_push-entrypoint.yaml)
-[![Coverage Status](https://img.shields.io/coveralls/github/emqx/emqx/master?label=Coverage)](https://coveralls.io/github/emqx/emqx?branch=master)
-[![Docker Pulls](https://img.shields.io/docker/pulls/emqx/emqx?label=Docker%20Pulls)](https://hub.docker.com/r/emqx/emqx)
-[![Slack](https://img.shields.io/badge/Slack-EMQ-39AE85?logo=slack)](https://slack-invite.emqx.io/)
-[![Discord](https://img.shields.io/discord/931086341838622751?label=Discord&logo=discord)](https://discord.gg/xYGf3fQnES)
-[![Twitter](https://img.shields.io/badge/Follow-EMQ-1DA1F2?logo=twitter)](https://twitter.com/EMQTech)
-[![YouTube](https://img.shields.io/badge/Subscribe-EMQ-FF0000?logo=youtube)](https://www.youtube.com/channel/UC5FjR77ErAxvZENEWzQaO5Q)
-
-
-EMQX is the world's most scalable open-source [MQTT broker](https://www.emqx.com/en/blog/the-ultimate-guide-to-mqtt-broker-comparison) with a high performance that connects 100M+ IoT devices in 1 cluster, while maintaining 1M message per second throughput and sub-millisecond latency.
-
-EMQX supports multiple open standard protocols like MQTT, HTTP, QUIC, and WebSocket. It’s 100% compliant with MQTT 5.0 and 3.x standard, and secures bi-directional communication with MQTT over TLS/SSL and various authentication mechanisms.
-
-With the built-in powerful SQL-based [rules engine](https://www.emqx.com/en/solutions/iot-rule-engine), EMQX can extract, filter, enrich and transform IoT data in real-time. In addition, it ensures high availability and horizontal scalability with a masterless distributed architecture, and provides ops-friendly user experience and great observability.
-
-EMQX boasts more than 20K+ enterprise users across 50+ countries and regions, connecting 100M+ IoT devices worldwide, and is trusted by over 400 customers in mission-critical scenarios of IoT, IIoT, connected vehicles, and more, including over 70 Fortune 500 companies like HPE, VMware, Verifone, SAIC Volkswagen, and Ericsson.
-
-For more information, please visit [EMQX homepage](https://www.emqx.io/).
-
-## Get Started
-
-#### Run EMQX in the Cloud
-
-The simplest way to set up EMQX is to create a managed deployment with EMQX Cloud. You can [try EMQX Cloud for free](https://www.emqx.com/en/signup?utm_source=github.com&utm_medium=referral&utm_campaign=emqx-readme-to-cloud&continue=https://cloud-intl.emqx.com/console/deployments/0?oper=new), no credit card required.
-
-#### Run EMQX using Docker
-
-```
-docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8084:8084 -p 8883:8883 -p 18083:18083 emqx/emqx:latest
-```
-
-Next, please follow the [Deploy with Docker](https://www.emqx.io/docs/en/v5.1/deploy/install-docker.html) guide for further instructions.
-
-#### Run EMQX cluster on Kubernetes
-
-Please consult official [EMQX Operator](https://github.com/emqx/emqx-operator/blob/main/docs/en_US/getting-started/getting-started.md) documentation for details.
-
-#### Run EMQX on macOS
-
-EMQX is available as core [Homebrew](https://brew.sh/) package.
-
-```
-brew install emqx
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-emqx" class="anchor" aria-hidden="true" tabindex="-1" href="#emqx"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX</font></font></h1>
+<p dir="auto"><a href="https://github.com/emqx/emqx/releases"><img src="https://camo.githubusercontent.com/f51f0efd7e9e6aa0c026afa4c3ef552bb8ab1925f7595888667515d96a1e97f4/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f656d71782f656d71783f636f6c6f723d627269676874677265656e266c6162656c3d52656c65617365" alt="GitHub 发布" data-canonical-src="https://img.shields.io/github/release/emqx/emqx?color=brightgreen&amp;label=Release" style="max-width: 100%;"></a>
+<a href="https://github.com/emqx/emqx/actions/workflows/_push-entrypoint.yaml"><img src="https://github.com/emqx/emqx/actions/workflows/_push-entrypoint.yaml/badge.svg" alt="构建状态" style="max-width: 100%;"></a>
+<a href="https://coveralls.io/github/emqx/emqx?branch=master" rel="nofollow"><img src="https://camo.githubusercontent.com/2f2423e9ad3f0e29580d00ef3a4e1e2b689f582a5779760335cc3959dedb5185/68747470733a2f2f696d672e736869656c64732e696f2f636f766572616c6c732f6769746875622f656d71782f656d71782f6d61737465723f6c6162656c3d436f766572616765" alt="覆盖状态" data-canonical-src="https://img.shields.io/coveralls/github/emqx/emqx/master?label=Coverage" style="max-width: 100%;"></a>
+<a href="https://hub.docker.com/r/emqx/emqx" rel="nofollow"><img src="https://camo.githubusercontent.com/2d703369d09c6458c28e40743d64d26de7814a114aa642b406778746819dc27a/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f70756c6c732f656d71782f656d71783f6c6162656c3d446f636b657225323050756c6c73" alt="Docker 拉取" data-canonical-src="https://img.shields.io/docker/pulls/emqx/emqx?label=Docker%20Pulls" style="max-width: 100%;"></a>
+<a href="https://slack-invite.emqx.io/" rel="nofollow"><img src="https://camo.githubusercontent.com/c57af4fdd41cb34888b1b6e74d270795a290c2b271540c3bc4c4cf3f5c598f1d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f536c61636b2d454d512d3339414538353f6c6f676f3d736c61636b" alt="松弛" data-canonical-src="https://img.shields.io/badge/Slack-EMQ-39AE85?logo=slack" style="max-width: 100%;"></a>
+<a href="https://discord.gg/xYGf3fQnES" rel="nofollow"><img src="https://camo.githubusercontent.com/5143c6a166993274e63d69be1e1e3cc31646ff6e90148c1a1245ae8391b13fab/68747470733a2f2f696d672e736869656c64732e696f2f646973636f72642f3933313038363334313833383632323735313f6c6162656c3d446973636f7264266c6f676f3d646973636f7264" alt="不和谐" data-canonical-src="https://img.shields.io/discord/931086341838622751?label=Discord&amp;logo=discord" style="max-width: 100%;"></a>
+<a href="https://twitter.com/EMQTech" rel="nofollow"><img src="https://camo.githubusercontent.com/47b87b6930b7cb1824817a31e92997d0e27ef968678b7eb18d15020ebe67eace/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f466f6c6c6f772d454d512d3144413146323f6c6f676f3d74776974746572" alt="推特" data-canonical-src="https://img.shields.io/badge/Follow-EMQ-1DA1F2?logo=twitter" style="max-width: 100%;"></a>
+<a href="https://www.youtube.com/channel/UC5FjR77ErAxvZENEWzQaO5Q" rel="nofollow"><img src="https://camo.githubusercontent.com/ba656312b43389267f9645d1c4a8bddfe39bac9e3a600e8b07b1d0ef865f93ab/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5375627363726962652d454d512d4646303030303f6c6f676f3d796f7574756265" alt="YouTube" data-canonical-src="https://img.shields.io/badge/Subscribe-EMQ-FF0000?logo=youtube" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 是全球最具扩展性的开源</font></font><a href="https://www.emqx.com/en/blog/the-ultimate-guide-to-mqtt-broker-comparison" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MQTT 代理，</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">具有高性能，可在 1 个集群中连接 1 亿多个 IoT 设备，同时保持每秒 100 万条消息的吞吐量和亚毫秒级的延迟。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 支持 MQTT、HTTP、QUIC、WebSocket 等多种开放标准协议。</font><font style="vertical-align: inherit;">它 100% 符合 MQTT 5.0 和 3.x 标准，并通过 TLS/SSL 和各种身份验证机制确保与 MQTT 的双向通信安全。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">借助内置的强大的基于 SQL 的</font></font><a href="https://www.emqx.com/en/solutions/iot-rule-engine" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">规则引擎</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，EMQX 可以实时提取、过滤、丰富和转换物联网数据。</font><font style="vertical-align: inherit;">此外，它通过无主分布式架构确保高可用性和水平可扩展性，并提供操作友好的用户体验和良好的可观察性。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 拥有超过 20K+ 企业用户，遍布 50 多个国家和地区，连接全球 1 亿+ IoT 设备，在物联网、工业物联网、车联网等关键任务场景中受到超过 400 家客户的信赖，其中包括 70 多家财富 500 强企业HPE、VMware、Verifone、上汽大众和爱立信。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">欲了解更多信息，请访问</font></font><a href="https://www.emqx.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 主页</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-get-started" class="anchor" aria-hidden="true" tabindex="-1" href="#get-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开始使用</font></font></h2>
+<h4 tabindex="-1" dir="auto"><a id="user-content-run-emqx-in-the-cloud" class="anchor" aria-hidden="true" tabindex="-1" href="#run-emqx-in-the-cloud"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在云端运行 EMQX</font></font></h4>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设置 EMQX 最简单的方法是使用 EMQX Cloud 创建托管部署。</font><font style="vertical-align: inherit;">您可以</font></font><a href="https://www.emqx.com/en/signup?utm_source=github.com&amp;utm_medium=referral&amp;utm_campaign=emqx-readme-to-cloud&amp;continue=https://cloud-intl.emqx.com/console/deployments/0?oper=new" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">免费试用 EMQX Cloud</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，无需信用卡。</font></font></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-run-emqx-using-docker" class="anchor" aria-hidden="true" tabindex="-1" href="#run-emqx-using-docker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Docker 运行 EMQX</font></font></h4>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8084:8084 -p 8883:8883 -p 18083:18083 emqx/emqx:latest
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8084:8084 -p 8883:8883 -p 18083:18083 emqx/emqx:latest" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接下来，请按照</font></font><a href="https://www.emqx.io/docs/en/v5.1/deploy/install-docker.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Docker 部署</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南获取进一步说明。</font></font></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-run-emqx-cluster-on-kubernetes" class="anchor" aria-hidden="true" tabindex="-1" href="#run-emqx-cluster-on-kubernetes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Kubernetes 上运行 EMQX 集群</font></font></h4>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关详细信息，</font><font style="vertical-align: inherit;">请参阅</font></font><a href="https://github.com/emqx/emqx-operator/blob/main/docs/en_US/getting-started/getting-started.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX Operator官方文档。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<h4 tabindex="-1" dir="auto"><a id="user-content-run-emqx-on-macos" class="anchor" aria-hidden="true" tabindex="-1" href="#run-emqx-on-macos"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 macOS 上运行 EMQX</font></font></h4>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://brew.sh/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 作为核心Homebrew</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包提供</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>brew install emqx
 emqx start
-```
-
-#### More installation options
-
-If you prefer to install and manage EMQX yourself, you can download the latest version from [www.emqx.io/downloads](https://www.emqx.io/downloads).
-
-For more installation options, see the [EMQX installation documentation](https://www.emqx.io/docs/en/v5.1/deploy/install.html).
-
-## Documentation
-
-The EMQX documentation is available at [www.emqx.io/docs/en/latest/](https://www.emqx.io/docs/en/latest/).
-
-The EMQX Enterprise documentation is available at [docs.emqx.com/en/](https://docs.emqx.com/en/).
-
-## Contributing
-
-Please see our [contributing.md](./CONTRIBUTING.md).
-
-For more organised improvement proposals, you can send pull requests to [EIP](https://github.com/emqx/eip).
-
-## Get Involved
-
-- Follow [@EMQTech on Twitter](https://twitter.com/EMQTech).
-- Join our [Slack](https://slack-invite.emqx.io/).
-- If you have a specific question, check out our [discussion forums](https://github.com/emqx/emqx/discussions).
-- For general discussions, join us on the [official Discord](https://discord.gg/xYGf3fQnES) team.
-- Keep updated on [EMQX YouTube](https://www.youtube.com/channel/UC5FjR77ErAxvZENEWzQaO5Q) by subscribing.
-
-## Resources
-
-- [MQTT client programming](https://www.emqx.com/en/blog/tag/mqtt-client-programming)
-
-  A series of blogs to help developers get started quickly with MQTT in PHP, Node.js, Python, Golang, and other programming languages.
-
-- [MQTT SDKs](https://www.emqx.com/en/mqtt-client-sdk)
-
-  We have selected popular MQTT client SDKs in various programming languages and provided code examples to help you quickly understand the use of MQTT clients.
-
-- [MQTTX](https://mqttx.app/)
-
-  An elegant cross-platform MQTT 5.0 client tool that provides desktop, command line, and web to help you develop and debug MQTT services and applications faster.
-
-- [Internet of Vehicles](https://www.emqx.com/en/blog/category/internet-of-vehicles)
-
-  Build a reliable, efficient, and industry-specific IoV platform based on EMQ's practical experience, from theoretical knowledge such as protocol selection to practical operations like platform architecture design.
-
-## Build From Source
-
-The `master` branch tracks the latest version 5. For version 4.4 checkout the `main-v4.4` branch.
-
-EMQX 4.4 requires OTP 24.
-EMQX 5.0 ~ 5.3 can be built with OTP 24 or 25.
-EMQX 5.4 and newer can be built with OTP 24 or 25.
-
-```bash
-git clone https://github.com/emqx/emqx.git
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="brew install emqx
+emqx start" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h4 tabindex="-1" dir="auto"><a id="user-content-more-installation-options" class="anchor" aria-hidden="true" tabindex="-1" href="#more-installation-options"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更多安装选项</font></font></h4>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您希望自行安装和管理 EMQX，可以从</font></font><a href="https://www.emqx.io/downloads" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">www.emqx.io/downloads</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载最新版本。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关更多安装选项，请参阅</font></font><a href="https://www.emqx.io/docs/en/v5.1/deploy/install.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 安装文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-documentation" class="anchor" aria-hidden="true" tabindex="-1" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 文档位于</font></font><a href="https://www.emqx.io/docs/en/latest/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">www.emqx.io/docs/en/latest/</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX Enterprise 文档位于</font></font><a href="https://docs.emqx.com/en/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">docs.emqx.com/en/</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contributing" class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅我们的</font></font><a href="/emqx/emqx/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">contributing.md</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于更有条理的改进提案，您可以向</font></font><a href="https://github.com/emqx/eip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EIP</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发送拉取请求。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-get-involved" class="anchor" aria-hidden="true" tabindex="-1" href="#get-involved"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">参与其中</font></font></h2>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Twitter 上关注</font></font><a href="https://twitter.com/EMQTech" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@EMQTech</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加入我们的</font></font><a href="https://slack-invite.emqx.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Slack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您有具体问题，请查看我们的</font></font><a href="https://github.com/emqx/emqx/discussions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">讨论论坛</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于一般性讨论，请加入我们的</font></font><a href="https://discord.gg/xYGf3fQnES" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方 Discord</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">团队。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过订阅在</font></font><a href="https://www.youtube.com/channel/UC5FjR77ErAxvZENEWzQaO5Q" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX YouTube</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上保持更新。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-resources" class="anchor" aria-hidden="true" tabindex="-1" href="#resources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">资源</font></font></h2>
+<ul dir="auto">
+<li>
+<p dir="auto"><a href="https://www.emqx.com/en/blog/tag/mqtt-client-programming" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MQTT客户端编程</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一系列博客可帮助开发人员快速开始使用 PHP、Node.js、Python、Golang 和其他编程语言的 MQTT。</font></font></p>
+</li>
+<li>
+<p dir="auto"><a href="https://www.emqx.com/en/mqtt-client-sdk" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MQTT SDK</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们精选了流行的各种编程语言的MQTT客户端SDK，并提供了代码示例，帮助您快速了解MQTT客户端的使用。</font></font></p>
+</li>
+<li>
+<p dir="auto"><a href="https://mqttx.app/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MQTTX</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一款优雅的跨平台 MQTT 5.0 客户端工具，提供桌面、命令行和 Web，帮助您更快地开发和调试 MQTT 服务和应用程序。</font></font></p>
+</li>
+<li>
+<p dir="auto"><a href="https://www.emqx.com/en/blog/category/internet-of-vehicles" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">车联网</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于 EMQ 的实践经验，从协议选择等理论知识到平台架构设计等实际操作，构建可靠、高效、符合行业特点的车联网平台。</font></font></p>
+</li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-build-from-source" class="anchor" aria-hidden="true" tabindex="-1" href="#build-from-source"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从源代码构建</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该</font></font><code>master</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分支跟踪最新版本 5。对于版本 4.4，请查看该</font></font><code>main-v4.4</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分支。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EMQX 4.4 需要 OTP 24。EMQX 5.0 ~ 5.3 可以使用 OTP 24 或 25 构建。EMQX 5.4 及更高版本可以使用 OTP 24 或 25 构建。</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>git clone https://github.com/emqx/emqx.git
+<span class="pl-c1">cd</span> emqx
+make
+_build/emqx/rel/emqx/bin/emqx console</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone https://github.com/emqx/emqx.git
 cd emqx
 make
-_build/emqx/rel/emqx/bin/emqx console
-```
-
-For 4.2 or earlier versions, release has to be built from another repo.
-
-```bash
-git clone https://github.com/emqx/emqx-rel.git
+_build/emqx/rel/emqx/bin/emqx console" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于 4.2 或更早版本，必须从另一个存储库构建版本。</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>git clone https://github.com/emqx/emqx-rel.git
+<span class="pl-c1">cd</span> emqx-rel
+make
+_build/emqx/rel/emqx/bin/emqx console</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone https://github.com/emqx/emqx-rel.git
 cd emqx-rel
 make
-_build/emqx/rel/emqx/bin/emqx console
-```
-
-## License
-
-See [LICENSE](./LICENSE).
+_build/emqx/rel/emqx/bin/emqx console" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h2 tabindex="-1" dir="auto"><a id="user-content-license" class="anchor" aria-hidden="true" tabindex="-1" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅</font></font><a href="/emqx/emqx/blob/master/LICENSE"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可证</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+</article></div>
